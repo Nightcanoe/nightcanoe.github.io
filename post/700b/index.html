@@ -27,7 +27,7 @@
 <meta property="og:description" content="这是为高等电磁场理论笔记的第二篇文章 本文将介绍麦克斯韦方程组(Maxwell&#39;s Equations)相关内容，这是经典电磁场理论的基础和顶峰，也是物理学历史上的一次范式革命：它是场的理论 本文不包含关于能量，功率及时谐场的描述，这些内容将在后续需要时引入 今天是2022年1月1日，新年快乐  总电荷和总电流表示的麦克斯韦方程组 积分形式 直接给出Maxwell&#39;s equat">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-01T08:34:58.000Z">
-<meta property="article:modified_time" content="2022-01-01T14:05:01.143Z">
+<meta property="article:modified_time" content="2022-01-01T17:51:20.645Z">
 <meta property="article:author" content="Nightcanoe">
 <meta property="article:tag" content="电磁场">
 <meta property="article:tag" content="物理">
@@ -499,15 +499,14 @@
     <article class="article-entry">
         <blockquote>
 <p><strong>这是为高等电磁场理论笔记的第二篇文章</strong></p>
-<p>本文将介绍麦克斯韦方程组(Maxwell's Equations)相关内容，这是经典电磁场理论的基础和顶峰，也是物理学历史上的一次范式革命：它是场的理论</p>
-<p>本文不包含关于能量，功率及时谐场的描述，这些内容将在后续需要时引入</p>
+<p>本文将介绍麦克斯韦方程组(Maxwell's Equations)相关内容，这是经典电磁场理论的基础和顶峰，也是物理学历史上的一次范式革命：它是场的理论<br></p>
+<p>本文不包含关于能量，功率及时谐场的描述，这些内容将在后续需要时引入<br></p>
 <p>今天是2022年1月1日，新年快乐</p>
 </blockquote>
 <h1 id="总电荷和总电流表示的麦克斯韦方程组">总电荷和总电流表示的麦克斯韦方程组</h1>
 <h2 id="积分形式">积分形式</h2>
 <p>直接给出Maxwell's equations的四个分式</p>
-<p><strong>Faraday’s induction law</strong> <span class="math display">\[\oint_c\vec{E}(\vec{r},t)\cdot d\vec{l}=-\frac{d}{dt}\iint_S\vec{B}(\vec{r},t)\cdot d\vec{S} \]</span> <strong>Ampère’s law (Maxwell–Ampère law)</strong> <span class="math display">\[\oint_c\vec{B}(\vec{r},t)\cdot d\vec{l}=\epsilon_0\mu_0\frac{d}{dt}\iint_S\vec{E}(\vec{r},t)\cdot d\vec{S}+\mu_0\iint_S\vec{J}_{total}(\vec{r},t)\cdot d\vec{S}\]</span> 其中为<span class="math inline">\(\vec{J}_{total}\)</span>总电流的电流密度（包括感应电流）</p>
-<p>通过表面<span class="math inline">\(S\)</span>的总电流和总电通量为 <span class="math display">\[\vec{J}(t)=\iint_S\vec{J}_{total}(\vec{r},t)\cdot d\vec{S} \\[8pt]
+<p><strong>Faraday’s induction law</strong> <span class="math display">\[\oint_c\vec{E}(\vec{r},t)\cdot d\vec{l}=-\frac{d}{dt}\iint_S\vec{B}(\vec{r},t)\cdot d\vec{S} \]</span> <strong>Ampère’s law (Maxwell–Ampère law)</strong> <span class="math display">\[\oint_c\vec{B}(\vec{r},t)\cdot d\vec{l}=\epsilon_0\mu_0\frac{d}{dt}\iint_S\vec{E}(\vec{r},t)\cdot d\vec{S}+\mu_0\iint_S\vec{J}_{total}(\vec{r},t)\cdot d\vec{S}\]</span> 其中为<span class="math inline">\(\vec{J}_{total}\)</span>总电流的电流密度（包括感应电流）<br> 通过表面<span class="math inline">\(S\)</span>的总电流和总电通量为 <span class="math display">\[\vec{J}(t)=\iint_S\vec{J}_{total}(\vec{r},t)\cdot d\vec{S} \\[8pt]
 \phi_E(t)=\iint_S\vec{E}(\vec{r},t)\cdot d\vec{S}\]</span> 则上式可写为 <span class="math display">\[\oint_c\vec{B}\cdot d\vec{l}=\epsilon_0\mu_0\frac{d}{dt}\phi_E+\mu_0\vec{J}\]</span> <strong>Gauss’ law</strong> <span class="math display">\[\iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{E}(\vec{r},t)\cdot d\vec{S}=\frac{1}{\epsilon_0}\iiint_V\rho_{e,total}(\vec{r},t)dV\]</span> <strong>Gauss’ law for the magnetic case</strong> <span class="math display">\[\iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{B}(\vec{r},t)\cdot d\vec{S}=0\]</span> 其中<span class="math inline">\(\rho_{e,total}\)</span>为总电荷密度（包括感应电荷） 将面元矢量表示为<span class="math inline">\(d\vec{S}=\hat{n}dA\)</span>，则体积<span class="math inline">\(V\)</span>内总电荷表示为 <span class="math display">\[Q(t)=\iiint_V\rho_{e,total}(\vec{r},t)dV\]</span> 则上式可写为 <span class="math display">\[\iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{E}\cdot\hat{n}dA=\frac{Q}{\epsilon_0}\]</span></p>
 <h2 id="微分形式">微分形式</h2>
 <p>由矢量运算相关理论，可由上式写出Maxwell's equations的微分形式 <span class="math display">\[\begin{aligned}
@@ -518,37 +517,31 @@
 \end{aligned}\]</span></p>
 <h2 id="电流连续性方程">电流连续性方程</h2>
 <p>电流连续性方程的积分和微分形式为 <span class="math display">\[\nabla\cdot\vec{J}_{total}=-\frac{\partial\rho_{e,total}}{\partial t} \\[8pt]
-\iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{J}_{tatal}\cdot d\vec{S}=-\frac{d}{dt}\iiint_V\rho_{e,total}dV\]</span> 电流连续性方程可由Maxwell's equations推导得出：对Maxwell–Ampère law的微分形式两边取散度，由矢量运算性质及Gauss’ law即可得到此式 电流的连续性方程左边为<strong>流出体积的净电流</strong>，右边为<strong>体积内净电荷量减少的速率</strong>，这代表了<strong>电流的连续</strong>与<strong>电荷的守恒</strong>，在时变场中适用，将电场和磁场耦合在了一起（静态场中电流和电荷不具备上述关系，此时电场和磁场解耦） 由Maxwell's equations和电流连续性方程可便捷得到适用于电路的基尔霍夫方程</p>
+\iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{J}_{tatal}\cdot d\vec{S}=-\frac{d}{dt}\iiint_V\rho_{e,total}dV\]</span> 电流连续性方程可由Maxwell's equations推导得出：对Maxwell–Ampère law的微分形式两边取散度，由矢量运算性质及Gauss’ law即可得到此式<br> 电流的连续性方程左边为<strong>流出体积的净电流</strong>，右边为<strong>体积内净电荷量减少的速率</strong>，这代表了<strong>电流的连续</strong>与<strong>电荷的守恒</strong>，在时变场中适用，将电场和磁场耦合在了一起（静态场中电流和电荷不具备上述关系，此时电场和磁场解耦）<br> 由Maxwell's equations和电流连续性方程可便捷得到适用于电路的基尔霍夫方程</p>
 <h2 id="洛伦兹力定律">洛伦兹力定律</h2>
-<p>经典力学将视角放在了物体和力（动量）的关系上，而经典电磁学的视角则转移到了场（field）上面，洛伦兹力则为架起两者沟通的桥梁，它描述了电磁场和物质之间的相互作用</p>
+<p>经典力学将视角放在了物体和力（动量）的关系上，而经典电磁学的视角则转移到了场（field）上面，洛伦兹力则为架起两者沟通的桥梁，它描述了电磁场和物质之间的相互作用<br></p>
 <p>携带电荷<span class="math inline">\(q\)</span>的粒子放在电磁场中，其速度为<span class="math inline">\(\vec{v}\)</span>，则电磁场施加于例子上的力为 <span class="math display">\[\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})\]</span></p>
 <h1 id="本构关系">本构关系</h1>
 <h2 id="电极化">电极化</h2>
-<p>物质的基本组成单元为分子，而分子由原子构成。在没有外界电磁场作用时，原子中电子轨道中心和质子中心重合，整个原子呈现电中性，即不携带电荷；而分子则可分为两类：<strong>极性分子</strong>与<strong>非极性分子</strong>，前者的等效正负电荷中心相互偏移，形成电偶极子，产生微弱电场，而后者的正负电荷中心重合，呈现电中性 但是，对原子或分子施加一个电磁场，由洛伦兹力定律，原子和非极性分子的正负电荷中心相互偏离，形成电偶极子，而极性分子的外加电磁场的作用下，取向随机的电偶极子合计形成的电场与外加电场相反，减弱总场的效应</p>
-<p>为了量化电偶极子的效应，引入电矩的概念 <span class="math display">\[\vec{p}=q\vec{l}\]</span></p>
-<p>其中<span class="math inline">\(\vec{l}\)</span>为负电荷中心指向正电荷中心的矢量</p>
-<p>单位体积内电矩之和即为电矩密度，亦为<strong>极化强度</strong>或<strong>极化矢量</strong> <span class="math display">\[\vec{P}=\lim_{\Delta v\rightarrow 0}\frac{1}{\Delta v}\sum_{i=1}^{n_p}\vec{p_i}\]</span></p>
-<p>其中<span class="math inline">\(n_p\)</span>为体积<span class="math inline">\(\Delta v\)</span>内的电偶极子数量 当电矩密度不均匀时，将存在净电荷，此时体电荷密度不为零，其表示为 <span class="math display">\[\rho_{e,b}=-\nabla\cdot\vec{P}\]</span></p>
-<p>此为束缚电荷密度 若媒质中还存在自由电荷，则总电荷密度为 <span class="math display">\[\rho_{e,total}=\rho_{e,f}+\rho_{e,b}=\rho_{e,f}-\nabla\cdot\vec{P}\]</span></p>
-<p><span class="math inline">\(\rho_{e,f}\)</span>为自由电荷密度</p>
-<p>将上式代入Gauss’ law <span class="math display">\[\nabla\cdot(\epsilon_0\vec{E}+\vec{P})=\rho_{e,f}\]</span></p>
+<p>物质的基本组成单元为分子，而分子由原子构成。在没有外界电磁场作用时，原子中电子轨道中心和质子中心重合，整个原子呈现电中性，即不携带电荷；而分子则可分为两类：<strong>极性分子</strong>与<strong>非极性分子</strong>，前者的等效正负电荷中心相互偏移，形成电偶极子，产生微弱电场，而后者的正负电荷中心重合，呈现电中性<br> 但是，对原子或分子施加一个电磁场，由洛伦兹力定律，原子和非极性分子的正负电荷中心相互偏离，形成电偶极子，而极性分子的外加电磁场的作用下，取向随机的电偶极子合计形成的电场与外加电场相反，减弱总场的效应<br> 为了量化电偶极子的效应，引入电矩的概念 <span class="math display">\[\vec{p}=q\vec{l}\]</span> 其中<span class="math inline">\(\vec{l}\)</span>为负电荷中心指向正电荷中心的矢量<br> 单位体积内电矩之和即为电矩密度，亦为<strong>极化强度</strong>或<strong>极化矢量</strong> <span class="math display">\[\vec{P}=\lim_{\Delta v\rightarrow 0}\frac{1}{\Delta v}\sum_{i=1}^{n_p}\vec{p_i}\]</span></p>
+<p>其中<span class="math inline">\(n_p\)</span>为体积<span class="math inline">\(\Delta v\)</span>内的电偶极子数量<br> 当电矩密度不均匀时，将存在净电荷，此时体电荷密度不为零，其表示为 <span class="math display">\[\rho_{e,b}=-\nabla\cdot\vec{P}\]</span></p>
+<p>此为束缚电荷密度<br> 若媒质中还存在自由电荷，则总电荷密度为 <span class="math display">\[\rho_{e,total}=\rho_{e,f}+\rho_{e,b}=\rho_{e,f}-\nabla\cdot\vec{P}\]</span></p>
+<p><span class="math inline">\(\rho_{e,f}\)</span>为自由电荷密度<br> 将上式代入Gauss’ law <span class="math display">\[\nabla\cdot(\epsilon_0\vec{E}+\vec{P})=\rho_{e,f}\]</span></p>
 <p>定义电通量密度 <span class="math display">\[\vec{D}=\epsilon_0\vec{E}+\vec{P}\]</span></p>
 <p>则自由电荷的Gauss' law为 <span class="math display">\[\nabla\cdot\vec{D}=\rho_{e,f}\]</span></p>
 <p>当外场随时间变化时，电极化产生的体电荷密度也将变化，这将导致电流的产生；由电流连续性方程可知，电极化引起的电流密度为 <span class="math display">\[\vec{J}_P=\frac{\partial\vec{P}}{\partial t}\]</span></p>
 <p>若极化强度与电场成比例关系，则 <span class="math display">\[\vec{P}=\epsilon_0\chi_e\vec{E}\]</span></p>
-<p><span class="math inline">\(\chi_e\)</span>为电极化率 由此可得电场的本构关系 <span class="math display">\[\vec{D}=\epsilon_0(1+\chi_e)\vec{E}=\epsilon\vec{E}\Rightarrow \epsilon=\epsilon_0(1+\chi_e)\]</span></p>
+<p><span class="math inline">\(\chi_e\)</span>为电极化率<br> 由此可得电场的本构关系 <span class="math display">\[\vec{D}=\epsilon_0(1+\chi_e)\vec{E}=\epsilon\vec{E}\Rightarrow \epsilon=\epsilon_0(1+\chi_e)\]</span></p>
 <p><span class="math inline">\(\epsilon\)</span>为介电常数，相对介电常数为<span class="math inline">\(\epsilon_r=1+\chi_e\)</span></p>
 <h2 id="磁极化">磁极化</h2>
 <p>在原子中，电子不间断绕原子核运动，这种运动形成微小的电流环，即为磁偶极子，用磁矩描述 <span class="math display">\[\vec{m}=I\vec{J}\]</span></p>
-<p><span class="math inline">\(\vec{J}\)</span>幅度为电流环面积，方向与电流方向构成右手螺旋</p>
-<p>单位体积内的磁偶极子数量即为<strong>磁化强度</strong>或<strong>磁化矢量</strong> <span class="math display">\[\vec{M}=\lim_{\Delta v\rightarrow 0}\frac{1}{\Delta v}\sum_{i=1}^{n_m}m_i\]</span></p>
+<p><span class="math inline">\(\vec{J}\)</span>幅度为电流环面积，方向与电流方向构成右手螺旋<br> 单位体积内的磁偶极子数量即为<strong>磁化强度</strong>或<strong>磁化矢量</strong> <span class="math display">\[\vec{M}=\lim_{\Delta v\rightarrow 0}\frac{1}{\Delta v}\sum_{i=1}^{n_m}m_i\]</span></p>
 <p><span class="math inline">\(n_m\)</span>为<span class="math inline">\(\Delta v\)</span>内磁偶极子数量 磁矩密度不均匀时，将产生净电流，其体电流密度为 <span class="math display">\[\vec{J}_m=\nabla\times\vec{M}\]</span></p>
 <p>媒质中总电流为电极化电流，磁化电流和自由电流之和 <span class="math display">\[\vec{J}_{total}=\vec{J}_P+\vec{J}_m+\vec{J}_f=\frac{\partial\vec{P}}{dt}+\nabla\times\vec{M}+\vec{J}_f\]</span></p>
 <p>将上式代入Maxwell–Ampère law可得 <span class="math display">\[\nabla\times(\frac{\vec{B}}{\mu_0}-\vec{M})=\frac{\partial\vec{D}}{\partial t}+\vec{J}_f\]</span></p>
 <p>定义磁场强度 <span class="math display">\[\vec{H}=\frac{\vec{B}}{\mu_0}-\vec{M}\]</span></p>
 <p>则上式可写为 <span class="math display">\[\nabla\times\vec{H}=\frac{\partial\vec{D}}{\partial t}+\vec{J}_f\]</span></p>
-<p>由于<span class="math inline">\(\nabla\cdot\vec{J}_m=\nabla\cdot(\nabla\times\vec{M})=0\)</span>，故磁化电流不会产生与之相关的电荷，这也表明磁场强度只涉及自由电流</p>
-<p>若磁化强度与磁场强度成比例关系，则 <span class="math display">\[\vec{M}=\chi_m\vec{H}\]</span></p>
+<p>由于<span class="math inline">\(\nabla\cdot\vec{J}_m=\nabla\cdot(\nabla\times\vec{M})=0\)</span>，故磁化电流不会产生与之相关的电荷，这也表明磁场强度只涉及自由电流<br> 若磁化强度与磁场强度成比例关系，则 <span class="math display">\[\vec{M}=\chi_m\vec{H}\]</span></p>
 <p>由此可得磁场的本构关系 <span class="math display">\[\vec{B}=\mu_0(1+\chi_m)\vec{H}=\mu\vec{H}\Rightarrow \mu=\mu_0(1+\chi_m)\]</span></p>
 <p><span class="math inline">\(\mu\)</span>为磁导率，相对磁导率为<span class="math inline">\(\mu_r=1+\chi_m\)</span></p>
 <h2 id="电传导">电传导</h2>
@@ -556,11 +549,10 @@
 <p><span class="math inline">\(\sigma\)</span>为电导率，与能量损失有关（自由电荷在媒质内运动时，和原子晶格发生碰撞，产生热量）</p>
 <h2 id="本构关系-1">本构关系</h2>
 <p>媒质的电磁特性可以由三个本构关系描述 <span class="math display">\[\vec{D}=\epsilon\vec{E}\quad\vec{B}=\mu\vec{H}\quad\vec{J}_c=\sigma\vec{E}\]</span></p>
-<p>根据本构关系即相关参数可对媒质分类</p>
-<p>按是否为空间函数分类： - 非均匀媒质 - 均匀媒质 <span class="math inline">\(\quad\nabla\epsilon\equiv\nabla\mu\equiv\nabla\sigma\equiv0\)</span></p>
-<p>按是否依赖时间分类： - 非静态媒质 - 静态媒质</p>
-<p>按<span class="math inline">\(\vec{D}\)</span>和<span class="math inline">\(\vec{B}\)</span>的方向分类： - 各向同性媒质 <span class="math inline">\(\quad\vec{D}\)</span>的方向平行于<span class="math inline">\(\vec{E}\)</span>的方向，且<span class="math inline">\(\vec{B}\)</span>的方向平行于<span class="math inline">\(\vec{H}\)</span>的方向 - 各向异性媒质</p>
-<p>各向异性媒质的本构关系需表示为 <span class="math display">\[\vec{D}=\bar{\epsilon}\cdot\vec{E}\quad\vec{B}=\bar{\mu}\cdot\vec{H}\]</span></p>
+<p>根据本构关系即相关参数可对媒质分类<br></p>
+<p>按是否为<strong>空间函数</strong>分类：<br> - 非均匀媒质<br> - 均匀媒质 <span class="math inline">\(\quad\nabla\epsilon\equiv\nabla\mu\equiv\nabla\sigma\equiv0\)</span></p>
+<p>按是否<strong>依赖时间</strong>分类：<br> - 非静态媒质<br> - 静态媒质<br></p>
+<p>按<span class="math inline">\(\vec{D}\)</span>和<span class="math inline">\(\vec{B}\)</span>的<strong>方向</strong>分类：<br> - 各向同性媒质 <span class="math inline">\(\quad\vec{D}\)</span>的方向平行于<span class="math inline">\(\vec{E}\)</span>的方向，且<span class="math inline">\(\vec{B}\)</span>的方向平行于<span class="math inline">\(\vec{H}\)</span>的方向<br> - 各向异性媒质<br> 各向异性媒质的本构关系需表示为 <span class="math display">\[\vec{D}=\bar{\epsilon}\cdot\vec{E}\quad\vec{B}=\bar{\mu}\cdot\vec{H}\]</span></p>
 <p>式中<span class="math inline">\(\bar{\epsilon}\)</span>，<span class="math inline">\(\bar{\mu}\)</span>为张量（Tensor），分别为张量介电常数和张量磁导率，其三维形式为 <span class="math display">\[\bar{\epsilon}=\begin{bmatrix}
     \epsilon_{xx} &amp; \epsilon_{xy} &amp; \epsilon_{xz} \\
     \epsilon_{yx} &amp; \epsilon_{yy} &amp; \epsilon_{yz} \\
@@ -576,15 +568,14 @@
     0 &amp; \epsilon_{yy} &amp; 0 \\
     0 &amp; 0 &amp; \epsilon_{zz}
 \end{bmatrix}\]</span></p>
-<p>若三个对角元素均不相同，则对应的媒质为<strong>双轴媒质</strong>；若三个对角元素中有两个相同，则对应的媒质为<strong>单轴媒质</strong>；若三个对角元素均相同，则对应<strong>各向同性媒质</strong></p>
-<p>按是否依赖场强分类： - 非线性媒质 - 线性媒质</p>
-<p>按是否依赖频率分类： - 色散媒质 - 非色散媒质</p>
-<p>色散媒质的本构关系以卷积的方式表示 <span class="math display">\[\begin{aligned}
+<p>若三个对角元素均不相同，则对应的媒质为<strong>双轴媒质</strong>；若三个对角元素中有两个相同， 则对应的媒质为<strong>单轴媒质</strong>；若三个对角元素均相同，则对应<strong>各向同性媒质</strong><br></p>
+<p>按是否<strong>依赖场强</strong>分类：<br> - 非线性媒质<br> - 线性媒质<br></p>
+<p>按是否<strong>依赖频率</strong>分类：<br> - 色散媒质<br> - 非色散媒质<br> 色散媒质的本构关系以卷积的方式表示 <span class="math display">\[\begin{aligned}
     \vec{D}&amp;=\epsilon_0\vec{E}+\epsilon_0\chi_e*\vec{E}=\epsilon_0\vec{E}+\epsilon_0\int_{-\infty}^t\chi_e(t-\tau)\vec{E}(\tau)d\tau \\
     \vec{B}&amp;=\mu_0\vec{H}+\mu_0\chi_m*\vec{H}=\mu_0\vec{H}+\mu_0\int_{-\infty}^t\chi_m(t-\tau)\vec{H}(\tau)d\tau
 \end{aligned}\]</span></p>
-<p>按电导率大小分类： - 理想介质/绝缘体 <span class="math inline">\(\quad\sigma=0\)</span> - 理想导电体 <span class="math inline">\(\quad\sigma\rightarrow\infty\)</span></p>
-<p>按磁导率大小分类： - 抗磁质（非磁性媒质） 磁化率为非常小的负数 - 顺磁质（非磁性媒质） 磁化率为非常小的正数 - 铁磁质 相对磁导率很大，方向和外加场一致（电导率通常很大，内部无法维持较强电磁场） - 铁氧体 微波频段相对磁导率很大，电导率很小</p>
+<p>按<strong>电导率</strong>大小分类：<br> - 理想介质/绝缘体 <span class="math inline">\(\quad\sigma=0\)</span><br> - 理想导电体 <span class="math inline">\(\quad\sigma\rightarrow\infty\)</span><br></p>
+<p>按<strong>磁导率</strong>大小分类：<br> - 抗磁质（非磁性媒质） 磁化率为非常小的负数<br> - 顺磁质（非磁性媒质） 磁化率为非常小的正数<br> - 铁磁质 相对磁导率很大，方向和外加场一致（电导率通常很大，内部无法维持较强电磁场）<br> - 铁氧体 微波频段相对磁导率很大，电导率很小<br></p>
 <h1 id="自由电荷和自由电流表示的麦克斯韦方程组">自由电荷和自由电流表示的麦克斯韦方程组</h1>
 <h2 id="积分形式-1">积分形式</h2>
 <p>引入本构关系后的Maxwell's equations为 <span class="math display">\[\begin{aligned}
@@ -609,10 +600,10 @@
     \nabla\cdot\vec{D}&amp;=\rho_{e,f} \\[8pt]
     \nabla\cdot\vec{B}&amp;=\rho_{m,f}
 \end{aligned}\]</span></p>
-<p>Maxwell's equations为什么如此重要且优美？这离不开其对称性和线性性的特征</p>
-<p>对称性的成立直接导致对偶原理的成立（将在后续文章中描述），这意味着在合适的条件下电场与磁场有着鲜明的对应关系，求其一则得其二，为分析和计算提供了便利.同时，对称性也揭示了电场和磁场之间高度的相似性，两者相互激发，互为因果，“电生磁，磁生电”即为如此.这其中是否蕴含更奇妙的原理？还待笔者继续学习</p>
-<p>所谓线性性，由于微分算符与积分算符都是线性算符，因此Maxwell's equations描述的是一个线性系统，亦即经典电磁场是一个线性系统，这不但意味着叠加原理可以直接适用于求解域，也意味着利用现有PDE（Partial Differential Equation，偏微分方程）技术可以得到很多场景下的解析解（如偶极子辐射场，散射问题，传输线，波导，谐振腔，天线等），并且在电磁场求解中可以用处理线性系统的工具求解，如傅里叶变换，矩阵理论等</p>
-<p>为什么线性性如此重要？以CFD（Computational Fluid Dynamics，计算流体力学）为例，这项技术旨在用数值方法在计算机中求解流体力学问题，而流体力学的一个重要方程为N-S方程（Navier-Stokes equations），这是一个非线性的偏微分方程，非线性项的出现为问题的求解制造了很大的困难，直接导致了湍流的出现.相比于流体力学，经典电磁场问题的求解因为Maxwell's equations的线性性简单了很多</p>
+<p>Maxwell's equations为什么如此重要且优美？这离不开其对称性和线性性的特征<br></p>
+<p>对称性的成立直接导致对偶原理的成立（将在后续文章中描述），这意味着在合适的条件下电场与磁场有着鲜明的对应关系，求其一则得其二，为分析和计算提供了便利.同时，对称性也揭示了电场和磁场之间高度的相似性，两者相互激发，互为因果，“电生磁，磁生电”即为如此.这其中是否蕴含更奇妙的原理？还待笔者继续学习<br></p>
+<p>所谓线性性，由于微分算符与积分算符都是线性算符，因此Maxwell's equations描述的是一个线性系统，亦即经典电磁场是一个线性系统，这不但意味着叠加原理可以直接适用于求解域，也意味着利用现有PDE（Partial Differential Equation，偏微分方程）技术可以得到很多场景下的解析解（如偶极子辐射场，散射问题，传输线，波导，谐振腔，天线等），并且在电磁场求解中可以用处理线性系统的工具求解，如傅里叶变换，矩阵理论等<br></p>
+<p>为什么线性性如此重要？以CFD（Computational Fluid Dynamics，计算流体力学）为例，这项技术旨在用数值方法在计算机中求解流体力学问题，而流体力学的一个重要方程为N-S方程（Navier-Stokes equations），这是一个非线性的偏微分方程，非线性项的出现为问题的求解制造了很大的困难，直接导致了湍流的出现.相比于流体力学，经典电磁场问题的求解因为Maxwell's equations的线性性简单了很多<br></p>
 <h2 id="电流与磁流的连续性方程">电流与磁流的连续性方程</h2>
 <p>引入磁流和磁荷的概念后，连续性方程的积分形式为 <span class="math display">\[\begin{aligned}
     \iint\!\!\!\!\!\!\!\!\!\!\!\!\!\;\subset\!\supset_S\vec{J}_{f}\cdot d\vec{S}&amp;=-\frac{d}{dt}\iiint_V\rho_{e,f} \\[8pt]
@@ -637,10 +628,11 @@
     \hat{n}\cdot\vec{B}&amp;=0
 \end{aligned}\]</span></p>
 <h1 id="结束">结束</h1>
-<p>以上便是麦克斯韦方程组相关的内容，加上1.1的矢量分析部分，电磁场的基本理论部分便完备了，下一篇文章将介绍自由空间中的电磁辐射问题</p>
-<p>以及，本科阶段的最后一门期末开始在昨天结束了，我觉得这是一件有值得记下的事情</p>
+<p>以上便是麦克斯韦方程组相关的内容，加上1.1的矢量分析部分，电磁场的基本理论部分便完备了，下一篇文章将介绍自由空间中的电磁辐射问题<br></p>
+<p>以及，本科阶段的最后一门期末开始在昨天结束了，我觉得这是一件值得记下的事情<br></p>
 <p>最后，再次祝各位新年快乐</p>
-<p><strong>pixiv ID： 82306806</strong> <del>其实我是ysss党</del></p>
+<p><strong>pixiv ID： 82306806</strong><br />
+<del>其实我是ysss党</del></p>
 
     </article>
     <!-- license -->
@@ -649,7 +641,7 @@
             <p>原文作者：<a href="https://nightcanoe.github.io">Nightcanoe</a>
             <p>原文链接：<a href="https://nightcanoe.github.io/post/700b/">https://nightcanoe.github.io/post/700b/</a>
             <p>发表日期：<a href="https://nightcanoe.github.io/post/700b/">January 1st 2022, 4:34:58 pm</a>
-            <p>更新日期：<a href="https://nightcanoe.github.io/post/700b/">January 1st 2022, 10:05:01 pm</a>
+            <p>更新日期：<a href="https://nightcanoe.github.io/post/700b/">January 2nd 2022, 1:51:20 am</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
