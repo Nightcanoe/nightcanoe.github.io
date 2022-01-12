@@ -27,7 +27,7 @@
 <meta property="og:description" content="这是高等电磁场理论的第三篇文章 本文将介绍电磁场中的矢量位及标量位，并求得自由空间中矢量位的解；本文涉及并矢，（自由空间）格林函数，辅助位函数等概念 自由空间为介电常数为\(\epsilon\)，磁导率为\(\mu\)的无限大均匀媒质，这是实际中最简单的情况 从本文开始，将开始涉及电磁波的传播，下篇文章将给出几个自由空间辐射问题的案例  矢量位和标量位 静态场 时谐场的Maxwe">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-11T13:42:35.000Z">
-<meta property="article:modified_time" content="2022-01-11T17:20:02.201Z">
+<meta property="article:modified_time" content="2022-01-12T18:43:10.270Z">
 <meta property="article:author" content="Nightcanoe">
 <meta property="article:tag" content="电磁场">
 <meta property="article:tag" content="物理">
@@ -336,7 +336,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">3.4k</span>阅读时长: <span class="post-count reading-time">15 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -548,12 +548,12 @@
 <p>代入<span class="math inline">\(\nabla\times\vec{H}_e=j\omega\epsilon\vec{E}_e+\vec{J}\)</span>可得 <span class="math display">\[\nabla\times(\frac{1}{\mu}\nabla\times\vec{A})=-j\omega\epsilon\nabla\phi+\omega^2\epsilon\vec{A}+\vec{J} \\[8pt]
 \Rightarrow \nabla(\nabla\cdot\vec{A})-\nabla^2\vec{A}=-j\omega\mu\epsilon\nabla\phi+k^2\vec{A}+\mu\vec{J} \qquad k^2=\omega^2\mu\epsilon\]</span></p>
 <p>参考静态场，由于矢量磁位的散度不影响磁场的解，为了简化运算引入<strong>洛伦兹规范（Lorenz Gauge）</strong>，而洛伦兹规范便于处理推迟势和推迟矢势问题，且该规范具有洛伦兹不变性；洛伦兹规范为 <span class="math display">\[\nabla\cdot\vec{A}=-j\omega\mu\epsilon\phi\]</span></p>
-<p>代入上式可得<strong>矢量亥姆霍兹方程（Helmholtz Equation）</strong> <span class="math display">\[\nabla^2\vec{A}+k^2\vec{A}=-\mu\vec{J}\]</span></p>
+<p>代入上式可得<strong>矢量亥姆霍兹方程（Helmholtz Equation）</strong>，亦称<strong>达朗贝尔方程（d'Alembert equation）</strong> <span class="math display">\[\nabla^2\vec{A}+k^2\vec{A}=-\mu\vec{J}\]</span></p>
 <p>确定<span class="math inline">\(\vec{A}\)</span>后即可计算<span class="math inline">\(\vec{E}_e\)</span>和<span class="math inline">\(\vec{H}_e\)</span> <span class="math display">\[\begin{cases}
     \vec{E}_e=-j\omega\vec{A}+\frac{1}{j\omega\mu\epsilon}\nabla(\nabla\cdot\vec{A}) \\[8pt]
     \vec{H}_e=\frac{1}{\mu}\nabla\times\vec{A}
 \end{cases}\]</span></p>
-<p>对<span class="math inline">\(\vec{E}_e+j\omega\vec{A}=-\nabla\phi\)</span>两边取散度可得<strong>标量亥姆霍兹方程（Helmholtz Equation）</strong> <span class="math display">\[\nabla^2\phi+k^2\phi=-\frac{\rho_e}{\epsilon}\]</span></p>
+<p>对<span class="math inline">\(\vec{E}_e+j\omega\vec{A}=-\nabla\phi\)</span>两边取散度可得<strong>标量亥姆霍兹方程（Helmholtz Equation）</strong>，亦称<strong>达朗贝尔方程（d'Alembert equation）</strong> <span class="math display">\[\nabla^2\phi+k^2\phi=-\frac{\rho_e}{\epsilon}\]</span></p>
 <p>同理，对磁流源产生的场，引入矢量电位<span class="math inline">\(\vec{F}\)</span>，其满足矢量亥姆霍兹方程 <span class="math display">\[\nabla^2\vec{F}+k^2\vec{F}=-\epsilon\vec{M}\]</span></p>
 <p>则磁流源产生的场可表示为 <span class="math display">\[\begin{cases}
     \vec{E}_m=-\frac{1}{\epsilon}\nabla\times\vec{F} \\[8pt]
@@ -565,10 +565,82 @@
     \vec{H}&amp;=\frac{1}{\mu}\nabla\times\vec{A}-j\omega\vec{F}+\frac{1}{j\omega\mu\epsilon}\nabla(\nabla\cdot\vec{F})
 \end{aligned}\]</span></p>
 <p>此式表明，总场可由矢量位唯一确定且完全表示，这是一个十分优美的结论，在后续章节中也将经常用到此式</p>
-<p><strong>待更</strong></p>
 <h1 id="自由空间中矢量位的解">自由空间中矢量位的解</h1>
 <h2 id="格林函数">格林函数</h2>
+<p>在物理中，需要对<strong>点源和其所产生场之间的关系</strong>进行描述，格林函数便是用于描述这种关系. 借助格林函数，点源与空间场分布之间的关系可被表示为 <span class="math display">\[u(x)=\int_{-\infty}^{\infty}\phi(\xi)G(\xi,x)d\xi\]</span></p>
+<p>其中，<span class="math inline">\(G(\xi,x)\)</span>为格林函数，表示<span class="math inline">\(\xi\)</span>域的点源在<span class="math inline">\(x\)</span>域产生的场分布；<span class="math inline">\(\phi(\xi)\)</span>为<span class="math inline">\(\xi\)</span>域的源分布函数；该式为解的积分公式，这是对线性系统应用叠加原理的结果. 显然，对已知分布的点源，若得到格林函数即可得到点源所产生的场</p>
+<p>下面将展示利用格林函数求解泊松方程<span class="math inline">\(\nabla^2\phi=-\frac{\rho_e(\vec{r})}{\epsilon}\)</span>，在求解之前需要先介绍狄拉克函数（<span class="math inline">\(\delta\)</span>函数），其可用于描述点电荷的分布</p>
+<p><span class="math inline">\(\delta\)</span>函数的定义式为 <span class="math display">\[\delta(\vec{r}-\vec{r&#39;})=\begin{aligned}
+    {\begin{cases}
+    \infty&amp;\quad\vec{r}=\vec{r&#39;} \\[8pt]
+    0&amp;\quad\vec{r}\neq\vec{r&#39;}
+\end{cases}}
+\end{aligned} \\[8pt]
+\iiint_V\delta(\vec{r}-\vec{r&#39;})dV=\begin{aligned}
+    {\begin{cases}
+    1&amp;\quad\vec{r&#39;}在V中 \\[8pt]
+    0&amp;\quad\vec{r&#39;}不在V中
+\end{cases}}
+\end{aligned}\]</span></p>
+<p>给定任意在<span class="math inline">\(\vec{r&#39;}\)</span>连续函数，其源函数<span class="math inline">\(f(\vec{r&#39;})\)</span>可视为无数点源函数<span class="math inline">\(\delta(\vec{r}-\vec{r&#39;})\)</span>的叠加，即 <span class="math display">\[\iiint_Vf(\vec{r})\delta(\vec{r}-\vec{r&#39;})=\begin{aligned}
+    {\begin{cases}
+    f(\vec{r&#39;})&amp;\quad\vec{r&#39;}在V中 \\[8pt]
+    0&amp;\quad\vec{r&#39;}不在V中
+\end{cases}}
+\end{aligned}\]</span></p>
+<p><span class="math inline">\(\delta\)</span>函数为符号函数（广义函数），其具有对称性 <span class="math display">\[\delta(x-x&#39;)=\delta(x&#39;-x)\]</span></p>
+<p>在笛卡尔坐标系，柱坐标系和球坐标系中，三维<span class="math inline">\(\delta\)</span>函数与一维<span class="math inline">\(\delta\)</span>函数的关系为 <span class="math display">\[\begin{aligned}
+    \delta(\vec{r}-\vec{r&#39;})&amp;=\delta(x-x&#39;)\delta(y-y&#39;)\delta(z-z&#39;) \\[8pt
+]\delta(\vec{r}-\vec{r&#39;})&amp;=\frac{1}{\rho}\delta(\rho-\rho&#39;)\delta(\phi-\phi&#39;)\delta(z-z&#39;) \\[8pt
+]\delta(\vec{r}-\vec{r&#39;})&amp;=\frac{1}{r^2\sin\theta}\delta(r-r&#39;)\delta(\theta-\theta&#39;)\delta(\phi-\phi&#39;)
+\end{aligned}\]</span></p>
+<p>下面基于格林函数和傅里叶变换求解自由电荷的泊松方程 对位于<span class="math inline">\(\vec{r_0}\)</span>的单位点电荷，电荷密度<span class="math inline">\(\rho(\vec{r})=\delta(\vec{r}-\vec{r_0})\)</span>，则其满足下述泊松方程，方程的解为单位点电荷形成的电势（不妨令<span class="math inline">\(\vec{r_0}=0\)</span>） <span class="math display">\[\nabla^2u=-\frac{\delta(\vec{r}-\vec{r&#39;})}{\epsilon} \\[8pt]
+\Rightarrow \frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}+\frac{\partial^2u}{\partial z^2}=-\frac{\delta(x)\delta(y)\delta(z)}{\epsilon}\]</span></p>
+<p>上式两边做傅里叶变换，得 <span class="math display">\[-(\omega_x^2+\omega_y^2+\omega_z^2)U(\omega_x,\omega_y,\omega_z)=-\frac{1}{\epsilon} \\[8pt]
+\Rightarrow U(\omega_x,\omega_y,\omega_z)=\frac{1}{\epsilon\omega^2} \\[8pt]\]</span></p>
+<p>在球坐标系中计算，将<span class="math inline">\(\vec{r}\)</span>取为极轴方向 <span class="math display">\[\begin{aligned}
+    u(x,y,z)&amp;=\mathrm{F}^{-1}[U(\omega_x,\omega_y,\omega_z)] \\[8pt]
+    &amp;=\frac{1}{(2\pi)^3}\iiint_{\infty}Ue^{j(\omega_xx+\omega_yy+\omega_zz)}d\omega \\[8pt]
+    &amp;=\frac{1}{(2\pi)^3\epsilon}\iiint_{\infty}\frac{e^{j\vec{\omega}\cdot\vec{r}}}{\omega^2}d\omega \\[8pt]
+    &amp;=\frac{1}{(2\pi)^3\epsilon}\int_0^{\infty}\int_0^\pi\int_0^{2\pi}\frac{e^{j\omega r\cos\theta}}{\omega^2}\omega^2\sin\theta d\omega d\theta d\phi \\[8pt]
+    &amp;=\frac{1}{4\pi\epsilon r}
+\end{aligned}
+\]</span></p>
+<p>故单位点电荷的格林函数为 <span class="math display">\[G(\vec{r},0)=\frac{1}{4\pi\epsilon r}\quad\Rightarrow\quad G(\vec{r},\vec{r_0})=\frac{1}{4\pi\epsilon|\vec{r}-\vec{r_0}|}\]</span></p>
+<p>故对密度为<span class="math inline">\(\rho(\vec{r_0})\)</span>的电荷分布，其泊松方程的解为 <span class="math display">\[u(\vec{r})=\frac{1}{4\pi\epsilon}\iiint_\infty\frac{\rho(\vec{r&#39;})}{|\vec{r}-\vec{r&#39;}|}d\vec{r&#39;}\]</span></p>
 <h2 id="自由空间格林函数">自由空间格林函数</h2>
+<p>引入格林函数和<span class="math inline">\(\delta\)</span>函数后，由于矢量磁位<span class="math inline">\(\vec{A}\)</span>和矢量电位<span class="math inline">\(\vec{F}\)</span>满足的矢量亥姆霍兹方程为线性方程，故其可表示为点源解的叠加，即 <span class="math display">\[\begin{aligned}
+    \vec{A}(\vec{r})&amp;=\mu\iiint_V\vec{J}(\vec{r&#39;})G(\vec{r},\vec{r&#39;})dV&#39; \\[8pt]
+    \vec{F}(\vec{r})&amp;=\epsilon\iiint_V\vec{M}(\vec{r&#39;})G(\vec{r},\vec{r&#39;})dV&#39;
+\end{aligned}\]</span></p>
+<p><span class="math inline">\(\vec{A}\)</span>与<span class="math inline">\(\vec{F}\)</span>满足的格林函数相同，这是由矢量亥姆霍兹方程的对称性，或者说是电场和磁场的对偶性决定的</p>
+<p>以矢量电位<span class="math inline">\(\vec{A}\)</span>为例，将上式带入矢量亥姆霍兹方程，且电流源由点源叠加表示，则 <span class="math display">\[\iiint_V[\nabla^2G(\vec{r},\vec{r&#39;})+k^2G(\vec{r},\vec{r&#39;})]\vec{J}(\vec{r&#39;})dV&#39;=-\iiint_V\delta(\vec{r}-\vec{r&#39;})\vec{J}(\vec{r&#39;})dV&#39; \\[8pt]
+\Rightarrow \nabla^2G(\vec{r}-\vec{r&#39;})+k^2G(\vec{r}-\vec{r&#39;})=-\delta(\vec{r}-\vec{r&#39;})\]</span></p>
+<p>此为<span class="math inline">\(\vec{A}\)</span>和<span class="math inline">\(\vec{F}\)</span>满足的格林函数，根据媒质的分布可求得特地条件下的格林函数</p>
+<p>在自由空间中，记格林函数为<span class="math inline">\(G_0(\vec{r},\vec{r&#39;})\)</span>，不妨令<span class="math inline">\(\vec{r&#39;}=0\)</span>，由于<span class="math inline">\(G_0(\vec{r},0)\)</span>对坐标原点球对称，则上式可写为 <span class="math display">\[\frac{1}{r^2}\frac{d}{dr}[r^2\frac{dG_0(\vec{r},0)}{dr}]+k^2G_0(\vec{r},0)=-\delta(\vec{r})\]</span></p>
+<p>当<span class="math inline">\(\vec{r}\neq0\)</span>时 <span class="math display">\[\frac{d^2[rG_0(\vec{r},0)]}{dr^2}+k^2[rG_0(\vec{r},0)]=0\]</span></p>
+<p>该方程两个独立解为<span class="math inline">\(rG_0(\vec{r},0)=Ce^{\pm jkr}\)</span>，只有由点源向外传播的波具有物理意义，即 <span class="math display">\[G_0(\vec{r},0)=C\frac{e^{-jkr}}{r}\]</span></p>
+<p>代入微分形式的矢量亥姆霍兹方程中，在以<span class="math inline">\(\vec{r}=0\)</span>为中心的小球上进行体积分，令小球半径<span class="math inline">\(\epsilon\rightarrow0\)</span>，可得<span class="math inline">\(C=\frac{1}{4\pi}\)</span>，故 <span class="math display">\[G_0(\vec{r},0)=\frac{e^{-jkr}}{4\pi r}\]</span></p>
+<p>一般情况下，自由空间的标量格林函数表示从<span class="math inline">\(\vec{r&#39;}\)</span>发出的向外传播的球面波，其形式为 <span class="math display">\[G_0(\vec{r},\vec{r&#39;})=\frac{e^{-jk|\vec{r}-\vec{r&#39;}|}}{4\pi|\vec{r}-\vec{r&#39;}|}\]</span></p>
+<h2 id="自由空间中的场源关系">自由空间中的场源关系</h2>
+<p>得到自由空间格林函数后便可得到自由空间中的场源关系，其借助格林函数，将电场和磁场直接由电流源和磁流源表达</p>
+<p>根据自由空间标量格林函数，自由空间中电流源和磁流源产生的矢量位为 <span class="math display">\[\begin{aligned}
+    \vec{A}(\vec{r})&amp;=\frac{\mu}{4\pi}\iiint_V\vec{J}(\vec{r&#39;})\frac{e^{-jk|\vec{r}-\vec{r&#39;}|}}{|\vec{r}-\vec{r&#39;}|}dV&#39; \\[8pt]
+    \vec{F}(\vec{r})&amp;=\frac{\epsilon}{4\pi}\iiint_V\vec{M}(\vec{r&#39;})\frac{e^{-jk|\vec{r}-\vec{r&#39;}|}}{|\vec{r}-\vec{r&#39;}|}dV&#39;
+\end{aligned}
+\]</span></p>
+<p>当<span class="math inline">\(\omega\rightarrow0\)</span>时，退化为静电场和静磁场的情况，即 <span class="math display">\[\begin{aligned}
+    \vec{A}(\vec{r})&amp;=\frac{\mu}{4\pi}\iiint_V\frac{\vec{J}(\vec{r&#39;})}{|\vec{r}-\vec{r&#39;}|}dV&#39; \\[8pt]
+    \vec{F}(\vec{r})&amp;=\frac{\epsilon}{4\pi}\iiint_V\frac{\vec{M}(\vec{r&#39;})}{|\vec{r}-\vec{r&#39;}|}dV&#39;
+\end{aligned}
+\]</span></p>
+<p>上式实质为卷积运算，由傅里叶逆变换可得矢量位的时域表达式 <span class="math display">\[\begin{aligned}
+    \vec{A}(\vec{r},t)&amp;=\frac{\mu}{4\pi}\iiint_V\frac{\vec{J}(\vec{r&#39;},t-R/c)}{|\vec{r}-\vec{r&#39;}|}dV&#39; \\[8pt]
+    \vec{F}(\vec{r},t)&amp;=\frac{\epsilon}{4\pi}\iiint_V\frac{\vec{M}(\vec{r&#39;}-R/c)}{|\vec{r}-\vec{r&#39;}|}dV&#39;
+\end{aligned}
+\]</span></p>
+<p>其中光速<span class="math inline">\(c=\frac{1}{\sqrt{\mu\epsilon}}\)</span>. 矢量位的时域表达式含时域上的滞后位，</p>
+<p>在电动力学中即为<strong>推迟势</strong>的概念. 推迟势满足非齐次的电磁波方程和洛伦兹规范，其物理含义为由于光速有限，电磁波传播至观察者位置的时间要比电磁波发射的时间滞后，这是具有实际物理意义的. 当<span class="math inline">\(G_0(\vec{r},0)=-C\frac{e^{-jkr}}{r}\)</span>时，所得矢量位为<strong>超前势</strong>，即此刻观察者观测到的电磁波是由未来时刻的电流源和磁流源产生的，它违反了因果律，不具有实际物理意义；实际上，这种情况下的标量格林函数表示由无穷远处向源点传播的波，这是不具有物理意义的</p>
 <h2 id="并矢">并矢</h2>
 <h2 id="自由空间并矢格林函数">自由空间并矢格林函数</h2>
 
@@ -578,8 +650,8 @@
         <div class="license-wrapper">
             <p>原文作者：<a href="https://nightcanoe.github.io">Nightcanoe</a>
             <p>原文链接：<a href="https://nightcanoe.github.io/post/708b/">https://nightcanoe.github.io/post/708b/</a>
-            <p>发表日期：<a href="https://nightcanoe.github.io/post/708b/">January 11th 2022, 9:42:35 pm</a>
-            <p>更新日期：<a href="https://nightcanoe.github.io/post/708b/">January 12th 2022, 1:20:02 am</a>
+            <p>发表日期：<a href="https://nightcanoe.github.io/post/708b/">一月 11日 2022, 9:42:35 晚上</a>
+            <p>更新日期：<a href="https://nightcanoe.github.io/post/708b/">一月 13日 2022, 2:43:10 凌晨</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -732,7 +804,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E4%BD%8D%E5%92%8C%E6%A0%87%E9%87%8F%E4%BD%8D"><span class="toc-number">1.</span> <span class="toc-text">矢量位和标量位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">静态场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E8%B0%90%E5%9C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">时谐场</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9F%A2%E9%87%8F%E4%BD%8D%E7%9A%84%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">自由空间中矢量位的解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">格林函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">自由空间格林函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E7%9F%A2"><span class="toc-number">2.3.</span> <span class="toc-text">并矢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E5%B9%B6%E7%9F%A2%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.4.</span> <span class="toc-text">自由空间并矢格林函数</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E4%BD%8D%E5%92%8C%E6%A0%87%E9%87%8F%E4%BD%8D"><span class="toc-number">1.</span> <span class="toc-text">矢量位和标量位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">静态场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E8%B0%90%E5%9C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">时谐场</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9F%A2%E9%87%8F%E4%BD%8D%E7%9A%84%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">自由空间中矢量位的解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">格林函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">自由空间格林函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E5%9C%BA%E6%BA%90%E5%85%B3%E7%B3%BB"><span class="toc-number">2.3.</span> <span class="toc-text">自由空间中的场源关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E7%9F%A2"><span class="toc-number">2.4.</span> <span class="toc-text">并矢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E7%A9%BA%E9%97%B4%E5%B9%B6%E7%9F%A2%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0"><span class="toc-number">2.5.</span> <span class="toc-text">自由空间并矢格林函数</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
